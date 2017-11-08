@@ -9,3 +9,19 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 ENV CHROME_BIN /usr/bin/chromium
+
+
+WORKDIR /project
+
+RUN git clone https://
+
+RUN npm install
+
+RUN npm run ng build
+
+COPY scripts/rune2e.sh /project/
+
+
+RUN ./rune2e.sh
+
+
